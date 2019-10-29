@@ -35,9 +35,6 @@
 	\textbf{Discrete integral:}\\
 	$\sum_{n = 0}^{N} f(x_n) \cdot \Delta x$
 	
-	\textbf{Taylor expansion:}\\
-	$f_k(x) = \sum_{j = 0}^{K} \frac{1}{j!} \cdot \frac{d^j f(x_0)}{dx^j}(x - x_0)^j$
-	
 	\textbf{Integral:}\\
 	$\int_{a}^{b} f(x) dx = \lim\limits_{N \to \infty} \sum_{n = 0}^{N - 1} f(x_n) \Delta x_n = \lim\limits_{N \to \infty} \sum_{n = 0}^{N - 1} f(x_n)(x_{n+1} - x_n)$\\
 	$\Delta x = \frac{b - a}{N}$
@@ -77,8 +74,6 @@
 	TODO\\
 	\textbf{ABC formula:}\\
 	$ax^2 + bx + c = 0 \iff x = \frac{-b \pm \sqrt{b^2 - 4a \cdot c}}{2a}$\\
-	Example:\\
-	TODO\\
 	
 	\rule{17cm}{1pt}
 	
@@ -89,10 +84,16 @@
 	$\lim\limits_{n \to 0} \frac{3n^3 + 1}{4n^3+n^3+n} = \lim\limits_{n \to 0} \frac{3n^3}{4n^3} = \lim\limits_{n \to \infty} \frac{3}{4} = \frac{3}{4}$\\
 	or: $\lim\limits_{x \to 0} \frac{2x^6 + 3x^2 - 6x}{7x^6 - 6x} \sim \frac{-6x}{-6x} = 1$\\
 	
-	\textbf{Derivatives by definition:}\\
-	$\frac{df(x^2)}{dx} = \frac{(x+dx)^2 - x^2}{dx} = \frac{x^2 + 2xdx+ (dx)^2-x^2}{dx} = \frac{2xdx}{dx} = 2x$\\
+	Derivatives:\\
+	$f(x) = x^3 \cdot cos (x^2 + 3x)$\\\
+	$\frac{df(x)}{dx} = 3x^2 \cdot (cos(x^2 + 3x)) + x^3 \cdot (-sin (x^2 + 3x)) \cdot 2x+3) = x^2 (3 cos(x^2+3x) - x \ sin(x^2 + 3x) \cdot 2x + 3)$\\
 	
-	Other options for derivatives: $(1/x, e^x, e^{2x}, x^3)$\\
+	\textbf{Derivatives by definition:}\\
+	$\frac{df(x^2)}{dx} = \lim\limits_{\Delta x \to 0}\frac{(x+\Delta x)^2 - x^2}{\Delta x} = \frac{x^2 + 2x \Delta x+ (\Delta x)^2-x^2}{\Delta x} = \frac{2x \Delta x}{ \Delta x} = 2x$\\
+	$\frac{df(\frac{1}{x})}{dx} = \lim\limits_{\Delta x \to 0} \frac{\frac{1}{x + \Delta x} - \frac{1}{x}}{\Delta x} = - \frac{\Delta x}{\frac{x (\Delta x + x)}{\Delta x}} = - \frac{\Delta x}{x (\Delta x + x) \Delta x} = \lim\limits_{\Delta x \to 0} -\frac{1}{x (\Delta x + x)} = -\frac{1}{x^2}$\\
+	$\frac{df(e^x)}{dx} = \lim\limits_{\Delta x \to 0} \frac{e^{x+\Delta x} - e^x}{\Delta x} = \frac{e^{\Delta x + x}}{1} = e^{\Delta x + x} = \lim\limits_{\Delta x \to 0} e^{\Delta x + x} = e^x$\\
+	$\frac{df(e^{2x})}{dx} = \lim\limits_{\Delta x \to 0} \frac{e^{2(x+\Delta x)} - e^{2x}}{\Delta x} = \frac{2e^{2(\Delta x + x)}}{1} = 2e^{2(\Delta x + x)} = \lim\limits_{\Delta x \to 0} 2e^{2(\Delta x + x)} = 2e^{2x}$\\
+	$\frac{df(x^3)}{dx} = \lim\limits_{\Delta x \to 0} \frac{(x+\Delta x)^3 - x^3}{\Delta x} = \frac{\Delta x^2 + 2\Delta x + x^2 + \Delta x + x^2 + x^2}{\Delta x} = \frac{3x^2 + 3\Delta x + \Delta x^2}{\Delta x} = \lim\limits_{\Delta x \to 0} \frac{3x^2 + 3\Delta x + \Delta x^2}{\Delta x} = 3x^2$\\
 	
 	\textbf{Integrals by definition:}\\
 	$\int_{0}^{b} x^2dx = \lim\limits_{N \to \infty} \sum_{n = 0}^{N - 1} x^2_n \Delta x$\\
@@ -107,5 +108,9 @@
 	take the limit:
 	$\int_{0}^{b} x^2 dx = \lim\limits_{N \to \infty} b^3 \frac{2N^3 - 3N^2 + 6}{6N^3} = b^3 \lim\limits_{N \to \infty} \frac{2N^3}{6N^3} = \frac{1}{3}b^3$\\
 	thus: $\int_{0}^{b} x^2 dx = \frac{1}{3} b^3$\\
+
+	\textbf{Integration by parts:}\\
+	
+	\textbf{Integration by substitution:}\\
 	
 \end{document}
