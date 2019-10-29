@@ -1,0 +1,111 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage[margin=1cm]{geometry}
+
+\begin{document}
+	
+	\begin{center}\textbf{Definitions}\end{center}
+	
+	\textbf{Finite difference:}\\
+	$f(x + \Delta x) = f(x) + \Delta f(x)$
+	
+	\textbf{Limit of a sequence:}\\	
+	$|a - S_n| < \epsilon$\\
+	$\lim\limits_{n \to \infty} S_n = a$
+
+	\textbf{Limit of a function:}\\
+	$|f(x) - l| \leq \epsilon$\\
+	$\lim\limits_{x \to x_0} f(x) = l$
+	
+	\textbf{Infinite sum:}\\
+	$\sum_{n = 0}^{\infty} a_n = \lim\limits_{n \to \infty} \sum_{n = 0}^{\infty} a_n$
+	
+	\textbf{Discrete derivative:}\\
+	$\frac{\Delta f}{\Delta x} = \frac{f(x_n + \Delta x) - f(x_n)}{\Delta x}$
+	
+	\textbf{Derivative:}\\
+	$\frac{df(x)}{dx} = \lim\limits_{\Delta x \to 0} \frac{\Delta f(x)}{\Delta x} = \lim\limits_{\Delta x \to 0} \frac{f(x + \Delta x) - f(x)}{\Delta x}$
+	
+	\textbf{Asymptotic relation:}\\
+	Sequences:\\
+	$\lim\limits_{n \to \infty} \frac{A_n}{B_n} = 1$\\
+	$A \sim B$\\
+	Functions:\\
+	$\lim\limits_{x \to x_0} \frac{f(x)}{g(x)} = \lim\limits_{x \to x_0} \frac{g(x)}{f(x)} = 1$\\
+	
+	\textbf{Discrete integral:}\\
+	$\sum_{n = 0}^{N} f(x_n) \cdot \Delta x$
+	
+	\textbf{Taylor expansion:}\\
+	$f_k(x) = \sum_{j = 0}^{K} \frac{1}{j!} \cdot \frac{d^j f(x_0)}{dx^j}(x - x_0)^j$
+	
+	\textbf{Integral:}\\
+	$\int_{a}^{b} f(x) dx = \lim\limits_{N \to \infty} \sum_{n = 0}^{N - 1} f(x_n) \Delta x_n = \lim\limits_{N \to \infty} \sum_{n = 0}^{N - 1} f(x_n)(x_{n+1} - x_n)$\\
+	$\Delta x = \frac{b - a}{N}$
+	
+	\textbf{Definite integral with relation to a differential:}\\
+	$\int_{a}^{b} f(x)dg(x) = \lim\limits_{N \to \infty} \sum_{n = 1}^{N - 1} f(x_n)\Delta g(x_n) = \lim\limits_{N \to \infty} \sum_{n = 1}^{N - 1} f(x_n)(g(x_{n+1}) - g(x_n))$
+	
+	\textbf{Fundamental theorem of calculus:}\\
+	$f(x)dx = \frac{dF(x)}{dx}dx = dF(x)$
+
+	\rule{17cm}{1pt}
+
+	\begin{center}\textbf{Rules}\end{center}
+	
+	\textbf{Derivative rules:}\\
+	Product rule:\\
+	$\frac{d}{dx}(f(x) \cdot g(x)) = f(x) \cdot \frac{d}{dx}g(x) + g(x) \cdot \frac{d}{dx}f(x)$\\
+	Example:\\
+	$\frac{d}{dx}(x^3 \cdot sin(x)) = x^3 \cdot \frac{d}{dx} sin(x) + (sin (x)) \cdot \frac{d}{dx} x^3 = x^3 \cdot cos(x) + 3x^2 \cdot sin(x)$\\
+	Chain rule:\\
+	$\frac{dh(x)}{dx} = \frac{df(u(x))}{du} \cdot \frac{du(x)}{dx}$\\
+	Example:\\
+	$\frac{d}{dx} ln(x^2 + 1) = \frac{dy}{du} \cdot \frac{du}{dx} = \frac{1}{u} \cdot 2x = \frac{1}{x^2 +1} \cdot 2x = \frac{2x}{x^2 + 1}$\\
+	Quotient rule:\\
+	$\frac{d}{dx}\frac{f(x)}{g(x} = \frac{g(x) \cdot \frac{d}{dx} f(x) - f(x) \cdot \frac{d}{dx}g(x)}{(g(x))^2}$\\
+	Example:\\
+	$\frac{d}{dx}\frac{2+3x}{x+1} = \frac{(x+1)\cdot3-(2+3x)\cdot1}{(x+1)^2} = \frac{1}{(x+1)^2}$\\
+	
+	\textbf{Integral rules:}\\
+	Integration by parts:\\
+	$\int_{a}^{b} g(x) \frac{df(x)}{dx} dx = (f(b)g(b) - f(a)g(a)) - \int_{a}^{b} f(x) \frac{dg(x)}{dx}dx$\\
+	Example:\\
+	$\int_{0}^{1} xe^x dx = \int_{0}^{1} x \frac{d e^x}{dx} = (e^1 \cdot 1 - e^0 \cdot 0) - \int_{0}^{1} e^x \frac{dx}{dx}dx = e - \int_{0}^{1} e^x dx = e - (e^1 - e^0) = e - e+1 = 1$\\
+	Integration by substitution:\\
+	$\int_{a}^{b} f(g(x)) (\frac{dg(x)}{d(x)}) dx = \int_{a}^{b} f(g(x)) dg(x)$\\
+	Example:\\
+	TODO\\
+	\textbf{ABC formula:}\\
+	$ax^2 + bx + c = 0 \iff x = \frac{-b \pm \sqrt{b^2 - 4a \cdot c}}{2a}$\\
+	Example:\\
+	TODO\\
+	
+	\rule{17cm}{1pt}
+	
+	\begin{center}\textbf{Examples}\end{center}
+	
+	\textbf{Answers in the expected notation:}\\
+	Limits:\\
+	$\lim\limits_{n \to 0} \frac{3n^3 + 1}{4n^3+n^3+n} = \lim\limits_{n \to 0} \frac{3n^3}{4n^3} = \lim\limits_{n \to \infty} \frac{3}{4} = \frac{3}{4}$\\
+	or: $\lim\limits_{x \to 0} \frac{2x^6 + 3x^2 - 6x}{7x^6 - 6x} \sim \frac{-6x}{-6x} = 1$\\
+	
+	\textbf{Derivatives by definition:}\\
+	$\frac{df(x^2)}{dx} = \frac{(x+dx)^2 - x^2}{dx} = \frac{x^2 + 2xdx+ (dx)^2-x^2}{dx} = \frac{2xdx}{dx} = 2x$\\
+	
+	Other options for derivatives: $(1/x, e^x, e^{2x}, x^3)$\\
+	
+	\textbf{Integrals by definition:}\\
+	$\int_{0}^{b} x^2dx = \lim\limits_{N \to \infty} \sum_{n = 0}^{N - 1} x^2_n \Delta x$\\
+	where:
+	$\Delta x = \frac{b - 0}{N} = \frac{b}{N}$ and $x_n = n \Delta x = \frac{n}{N} b$\\
+	rewrite:
+	$\sum_{n = 0}^{N - 1} x^2_n \Delta x = \sum_{n = 0}^{N - 1} \frac{n^2}{N^3} b^3 = \frac{b^3}{N^3} \sum_{n = 0}^{N - 1} n^2$\\
+	we use the following sum:
+	$\sum_{n = 0}^{N - 1} n^2 = \frac{(N-1)N(2N-1)}{6}$\\
+	our sum becomes:
+	$\sum_{n = 0}^{N - 1} x^2 \Delta x = b^3 \frac{(N-1)N(2N-1)}{6N^3} = b^3 \frac{2N^3 - 3N^2 + 6}{6N^3}$\\
+	take the limit:
+	$\int_{0}^{b} x^2 dx = \lim\limits_{N \to \infty} b^3 \frac{2N^3 - 3N^2 + 6}{6N^3} = b^3 \lim\limits_{N \to \infty} \frac{2N^3}{6N^3} = \frac{1}{3}b^3$\\
+	thus: $\int_{0}^{b} x^2 dx = \frac{1}{3} b^3$\\
+	
+\end{document}
