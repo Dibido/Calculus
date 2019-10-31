@@ -5,10 +5,10 @@
 	
 	\begin{center}\textbf{Definitions}\end{center}
 	
-	\textbf{Finite difference:}\\
-	$f(x + \Delta x) = f(x) + \Delta f(x)$
-	
-	\textbf{Limit of a sequence:}\\	
+	\textbf{Finite difference:} 						\hfill \textbf{Critical points:}\\
+	$f(x + \Delta x) = f(x) + \Delta f(x)$ 				\hfill 1. Compute the derivative
+
+	\textbf{Limit of a sequence:}						\hfill 2. \\
 	$|a - S_n| < \epsilon$\\
 	$\lim\limits_{n \to \infty} S_n = a$
 	
@@ -33,7 +33,7 @@
 	Sequences:\\
 	$\lim\limits_{n \to \infty} \frac{A_n}{B_n} = 1$ means $A \sim B$\\
 	Functions:\\
-	$\lim\limits_{x \to x_0} \frac{f(x)}{g(x)} = \lim\limits_{x \to x_0} \frac{g(x)}{f(x)} = 1$\\
+	$\lim\limits_{x \to x_0} \frac{f(x)}{g(x)} = 1,$ then $f(x) \sim g(x).$\\
 	
 	\textbf{Discrete integral:}\\
 	$\sum_{n = 0}^{N} f(x_n) \cdot \Delta x$
@@ -70,7 +70,7 @@
 	Integration by parts:\\
 	$\int_{a}^{b} g(x) \frac{df(x)}{dx} dx = (f(b)g(b) - f(a)g(a)) - \int_{a}^{b} f(x) \frac{dg(x)}{dx}dx$\\
 	Example:\\
-	$\int_{0}^{1} xe^x dx = \int_{0}^{1} x \frac{d e^x}{dx} = (e^1 \cdot 1 - e^0 \cdot 0) - \int_{0}^{1} e^x \frac{dx}{dx}dx = e - \int_{0}^{1} e^x dx = e - (e^1 - e^0) = e - e+1 = 1$\\
+	$\int_{0}^{1} xe^x dx = \int_{0}^{1} x \frac{d e^x}{dx} dx = (e^1 \cdot 1 - e^0 \cdot 0) - \int_{0}^{1} e^x \frac{dx}{dx}dx = e - \int_{0}^{1} e^x dx = e - (e^1 - e^0) = e - e+1 = 1$\\
 	Integration by substitution:\\
 	$\int_{a}^{b} f(g(x)) (\frac{dg(x)}{d(x)}) dx = \int_{a}^{b} f(g(x)) dg(x)$\\
 	Example:\\
@@ -84,7 +84,7 @@
 	
 	\textbf{Answers in the expected notation:}\\
 	Limits:\\
-	$\lim\limits_{n \to 0} \frac{3n^3 + 1}{4n^3+n^3+n} = \lim\limits_{n \to 0} \frac{3n^3}{4n^3} = \lim\limits_{n \to \infty} \frac{3}{4} = \frac{3}{4}$
+	$\lim\limits_{n \to \infty} \frac{3n^3 + 1}{4n^3+n^3+n} = \lim\limits_{n \to \infty} \frac{3n^3}{4n^3} = \lim\limits_{n \to \infty} \frac{3}{4} = \frac{3}{4}$
 	\textbf{or:} $\lim\limits_{x \to 0} \frac{2x^6 + 3x^2 - 6x}{7x^6 - 6x} \sim \frac{-6x}{-6x} = 1$\\
 	
 	Derivatives:\\
@@ -96,7 +96,9 @@
 	%https://www.symbolab.com/solver/derivative-using-definition-calculator/derivative%20using%20definition%20%5Cfrac%7B1%7D%7Bx%7D
 	$\frac{df(\frac{1}{x})}{dx} = \lim\limits_{\Delta x \to 0} \frac{\frac{1}{x + \Delta x} - \frac{1}{x}}{\Delta x} = \lim\limits_{\Delta x \to 0} -\frac{\Delta x}{\frac{x (\Delta x + x)}{\Delta x}} = \lim\limits_{\Delta x \to 0} -\frac{\Delta x}{x (\Delta x + x) \Delta x} = \lim\limits_{\Delta x \to 0} -\frac{1}{x (\Delta x + x)} = -\frac{1}{x^2}$\\
 	%https://www.symbolab.com/solver/derivative-using-definition-calculator/derivative%20using%20definition%20e%5E%7Bx%7D
-	$\frac{df(e^x)}{dx} = \lim\limits_{\Delta x \to 0} \frac{e^{x+\Delta x} - e^x}{\Delta x} = \lim\limits_{\Delta x \to 0} \frac{e^{\Delta x + x}}{1} = \lim\limits_{\Delta x \to 0} e^{\Delta x + x} = \lim\limits_{\Delta x \to 0} e^{\Delta x + x} = e^x$\\
+	$\frac{df(e^x)}{dx} = \lim\limits_{\Delta x \to 0} \frac{e^{x+\Delta x} - e^x}{\Delta x} = \lim\limits_{\Delta x \to 0} \frac{e^{\Delta x + x}}{1} = \lim\limits_{\Delta x \to 0} e^{\Delta x + x} = e^x$\\
+	%https://www.symbolab.com/solver/derivative-using-definition-calculator/derivative%20using%20definition%20%5Cfrac%7Bde%5E%7Bx%2B1%7D%7D%7Bdx%7D
+	$\frac{df(e^{x+1})}{dx} = \lim\limits_{\Delta x \to 0} \frac{e^{x+\Delta x + 1} - e^{x+1}}{\Delta x} = \lim\limits_{\Delta x \to 0} \frac{e^{x+1}e^{\Delta x} - e^{x+1}}{\Delta x} = e^{x+1} \cdot \lim\limits_{\Delta x \to 0} \frac{e^{\Delta x} - 1}{\Delta x} = e^{x+1} \cdot \lim\limits_{\Delta x \to 0} \frac{\Delta x}{\Delta x} = e^{x+1} \cdot 1 = e^{x+1}$\\
 	%https://www.symbolab.com/solver/derivative-using-definition-calculator/derivative%20using%20definition%20e%5E%7B2x%7D
 	$\frac{df(e^{2x})}{dx} = \lim\limits_{\Delta x \to 0} \frac{e^{2(x+\Delta x)} - e^{2x}}{\Delta x} = \lim\limits_{\Delta x \to 0} \frac{2e^{2(\Delta x + x)}}{1} = \lim\limits_{\Delta x \to 0} 2e^{2(\Delta x + x)} = \lim\limits_{\Delta x \to 0} 2e^{2(\Delta x + x)} = 2e^{2x}$\\
 	$\frac{df(x^3)}{dx} = \lim\limits_{\Delta x \to 0} \frac{(x+\Delta x)^3 - x^3}{\Delta x} = \lim\limits_{\Delta x \to 0} \frac{\Delta x^2 + 2\Delta x + x^2 + \Delta x + x^2 + x^2}{\Delta x} = \lim\limits_{\Delta x \to 0} \frac{3x^2 + 3\Delta x + \Delta x^2}{\Delta x} = \lim\limits_{\Delta x \to 0} \frac{3x^2 + 3\Delta x + \Delta x^2}{\Delta x} = 3x^2$\\
