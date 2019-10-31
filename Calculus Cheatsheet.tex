@@ -11,10 +11,14 @@
 	\textbf{Limit of a sequence:}\\	
 	$|a - S_n| < \epsilon$\\
 	$\lim\limits_{n \to \infty} S_n = a$
+	
+	where $a = N_\epsilon$ such that $|a - S_n| < \epsilon$\\
+	TODO explain better
 
 	\textbf{Limit of a function:}\\
 	$|f(x) - l| \leq \epsilon$\\
 	$\lim\limits_{x \to x_0} f(x) = l$
+	TODO explain better
 	
 	\textbf{Infinite sum:}\\
 	$\sum_{n = 0}^{\infty} a_n = \lim\limits_{n \to \infty} \sum_{n = 0}^{\infty} a_n$
@@ -90,10 +94,14 @@
 	
 	\textbf{Derivatives by definition:}\\
 	$\frac{df(x^2)}{dx} = \lim\limits_{\Delta x \to 0}\frac{(x+\Delta x)^2 - x^2}{\Delta x} = \frac{x^2 + 2x \Delta x+ (\Delta x)^2-x^2}{\Delta x} = \frac{2x \Delta x}{ \Delta x} = 2x$\\
+	%https://www.symbolab.com/solver/derivative-using-definition-calculator/derivative%20using%20definition%20%5Cfrac%7B1%7D%7Bx%7D
 	$\frac{df(\frac{1}{x})}{dx} = \lim\limits_{\Delta x \to 0} \frac{\frac{1}{x + \Delta x} - \frac{1}{x}}{\Delta x} = - \frac{\Delta x}{\frac{x (\Delta x + x)}{\Delta x}} = - \frac{\Delta x}{x (\Delta x + x) \Delta x} = \lim\limits_{\Delta x \to 0} -\frac{1}{x (\Delta x + x)} = -\frac{1}{x^2}$\\
+	%https://www.symbolab.com/solver/derivative-using-definition-calculator/derivative%20using%20definition%20e%5E%7Bx%7D
 	$\frac{df(e^x)}{dx} = \lim\limits_{\Delta x \to 0} \frac{e^{x+\Delta x} - e^x}{\Delta x} = \frac{e^{\Delta x + x}}{1} = e^{\Delta x + x} = \lim\limits_{\Delta x \to 0} e^{\Delta x + x} = e^x$\\
+	%https://www.symbolab.com/solver/derivative-using-definition-calculator/derivative%20using%20definition%20e%5E%7B2x%7D
 	$\frac{df(e^{2x})}{dx} = \lim\limits_{\Delta x \to 0} \frac{e^{2(x+\Delta x)} - e^{2x}}{\Delta x} = \frac{2e^{2(\Delta x + x)}}{1} = 2e^{2(\Delta x + x)} = \lim\limits_{\Delta x \to 0} 2e^{2(\Delta x + x)} = 2e^{2x}$\\
 	$\frac{df(x^3)}{dx} = \lim\limits_{\Delta x \to 0} \frac{(x+\Delta x)^3 - x^3}{\Delta x} = \frac{\Delta x^2 + 2\Delta x + x^2 + \Delta x + x^2 + x^2}{\Delta x} = \frac{3x^2 + 3\Delta x + \Delta x^2}{\Delta x} = \lim\limits_{\Delta x \to 0} \frac{3x^2 + 3\Delta x + \Delta x^2}{\Delta x} = 3x^2$\\
+	%https://www.symbolab.com/solver/derivative-using-definition-calculator/derivative%20using%20definition%20x%5E%7B3%7D
 	
 	\textbf{Integrals by definition:}\\
 	$\int_{0}^{b} x^2dx = \lim\limits_{N \to \infty} \sum_{n = 0}^{N - 1} x^2_n \Delta x$\\
