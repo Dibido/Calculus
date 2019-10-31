@@ -5,19 +5,19 @@
 	
 	\begin{center}\textbf{Definitions}\end{center}
 	
-	\textbf{Finite difference:} 						\hfill \textbf{Critical points:}\\
-	$f(x + \Delta x) = f(x) + \Delta f(x)$ 				\hfill 1. Compute the derivative
+	\textbf{Finite difference:} 									\hfill \textbf{Critical points:}\\
+	$f(x + \Delta x) = f(x) + \Delta f(x)$ 							\hfill 1. Compute the derivative
 
-	\textbf{Limit of a sequence:}						\hfill 2. \\
-	$|a - S_n| < \epsilon$\\
-	$\lim\limits_{n \to \infty} S_n = a$
+	\textbf{Limit of a sequence:}									\hfill 2. Find the points where the derivative = 0\\
+	$|a - S_n| < \epsilon$											\hfill 3. Compute the second derivative\\
+	$\lim\limits_{n \to \infty} S_n = a$							\hfill 4. Find the value at the point in the second derivative
 	
-	where $a = N_\epsilon$ such that $|a - S_n| < \epsilon$\\
+	where $a = N_\epsilon$ such that $|a - S_n| < \epsilon$			\hfill 5. If the value $>$ 0 then minimum, if $<$ 0, maximum\\
 	TODO explain better
 
 	\textbf{Limit of a function:}\\
 	$|f(x) - l| \leq \epsilon$\\
-	$\lim\limits_{x \to x_0} f(x) = l$
+	$\lim\limits_{x \to x_0} f(x) = l$\\
 	TODO explain better
 	
 	\textbf{Infinite sum:}\\
@@ -107,18 +107,22 @@
 	\textbf{Integrals by definition:}\\
 	$\int_{0}^{b} x^2dx = \lim\limits_{N \to \infty} \sum_{n = 0}^{N - 1} x^2_n \Delta x$\\
 	where:
-	$\Delta x = \frac{b - 0}{N} = \frac{b}{N}$ and $x_n = n \Delta x = \frac{n}{N} b$\\
+	$\Delta x = \frac{b - 0}{N} = \frac{b}{N}$ and $x_n = n \cdot \Delta x = \frac{n \cdot b}{N}$\\
 	rewrite:
-	$\sum_{n = 0}^{N - 1} x^2_n \Delta x = \sum_{n = 0}^{N - 1} \frac{n^2}{N^3} b^3 = \frac{b^3}{N^3} \sum_{n = 0}^{N - 1} n^2$\\
+	$\lim\limits_{N \to \infty}\sum_{n = 0}^{N - 1} x^2_n \cdot \Delta x = \lim\limits_{N \to \infty} \sum_{n = 0}^{N - 1} (\frac{n \cdot b}{N})^2 \cdot \frac{b}{N} = \lim\limits_{N \to \infty} \sum_{n = 0}^{N - 1} \frac{n^2 \cdot b^3}{N^3} = \lim\limits_{N \to \infty} \frac{b^3}{N^3} \sum_{n = 0}^{N - 1} n^2$\\
 	we use the following sum:
 	$\sum_{n = 0}^{N - 1} n^2 = \frac{(N-1)N(2N-1)}{6}$\\
 	our sum becomes:
-	$\sum_{n = 0}^{N - 1} x^2 \Delta x = b^3 \frac{(N-1)N(2N-1)}{6N^3} = b^3 \frac{2N^3 - 3N^2 + 6}{6N^3}$\\
+	$\lim\limits_{N \to \infty} \frac{b^3}{N^3} \cdot \frac{(N -1) N (2N - 1)}{6} = \lim\limits_{N \to \infty} b^3 \cdot \frac{2 - \frac{3}{N} + \frac{1}{N}^2}{6}$\\
 	take the limit:
-	$\int_{0}^{b} x^2 dx = \lim\limits_{N \to \infty} b^3 \frac{2N^3 - 3N^2 + 6}{6N^3} = b^3 \lim\limits_{N \to \infty} \frac{2N^3}{6N^3} = \frac{1}{3}b^3$\\
+	$\int_{0}^{b} x^2 dx = \lim\limits_{N \to \infty} b^3 \cdot \frac{2 - \frac{3}{N} + \frac{1}{N}^2}{6} = b^3 \cdot \frac{2 - 0 + 0}{6} = \frac{1}{3}b^3$\\
 	thus: $\int_{0}^{b} x^2 dx = \frac{1}{3} b^3$\\
 
 	\textbf{Integration by parts:}\\
+	Example:\\
+	$\int_{-1}^{1}(xe^{x}+x^{3})dx=\int_{-1}^{1}xe^{x}dx+\int_{-1}^{1}x^{3}dx\\
+	=(xe^{x}-e^{x}+\frac{1}{4}x^{4})-(xe^{x}-e^{x}+\frac{1}{4}x^{4})\\
+	=(1\cdot e^{1}-e^{1}+\frac{1}{4}\cdot 1^{4})-(-1\cdot e^{-1}-e^{-1}+\frac{1}{4}\cdot(-1)^{4})=\frac{2}{e}$
 	
 	\textbf{Integration by substitution:}\\
 	
